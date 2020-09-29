@@ -1,8 +1,10 @@
 import speech_recognition
 import pyttsx3
 import datetime
+import pyfiglet
 
 #Define
+ascii_banner = pyfiglet.figlet_format("Mr.Noob!!")
 noob_listen = speech_recognition.Recognizer()
 noob_speech = pyttsx3.init()
 
@@ -21,6 +23,7 @@ else:
     noob_brain = f"Good Evening {owner}!!"
 
 def new_run():
+    print(ascii_banner)
     print("Mr.Noob: " + noob_brain)
     noob_speech.say(noob_brain)
     noob_speech.runAndWait()
